@@ -13,17 +13,79 @@
             crossorigin="anonymous">
             <link rel = "stylesheet" href="assets/style.css" type="text/css">
 
-            <!-- link jquery and javascript files -->
+            <!-- link jquery, javascript files and moment.js -->
             <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>           
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+
             <script src="assets/script.js"></script>
 
         </head>
 
         <body>
-             <div class="jumbotron jumbotron-fluid">
-                    <h1 class="display-4 text-center">Train Scheduler</h1>
-                    <h4 class="display-6 text-center">Aaron Goldsmith</h4>
-             </div>
+            <div class="container mt-2">
+                    <!-- JUMBOTRON -->
+                <div class="row d-block mx-auto w-100">
+                   <div class="jumbotron bg-dark text-light">
+                          <h1 class="display-4 text-center">Train Scheduler</h1>
+                          <h4 class="display-6 text-center">Aaron Goldsmith</h4>
+                   </div>
+                </div>
+                
+                <div class="card card-primary border-primary mb-3">
+                         <div class="card-header bg-primary text-light"><strong>Current Train Schedule</strong></div>
+                                <div class="card-body p-0 m-0">           
+                                 </div>
+                        </div>
+                </div>
+
+                <!-- TRAIN DATA DISPLAYED FROM FIREBASE -->
+                <div class="card card-primary border-primary mb-3">
+                        <div class="card-header bg-primary text-light"><strong>Current Train Schedule</strong></div>
+                        <div class="card-body p-0 m-0">                           
+                           <table class="table table-md rounded">
+                           <tbody>
+                                        <tr>
+                                        <th scope="col">Train Name</th>
+                                        <th scope="col">Destination</th>
+                                        <th scope="col">Frequency (min)</th>
+                                        <th scope="col">Next Arrival</th>
+                                        <th scope="col">Minutes Away</th>
+                                        </tr>
+                                <!-- Dummy data -->
+                                <tr>
+                                        <td>Thomas Engine</td>
+                                        <td>Milan, Italy</td>
+                                        <td>125</td>
+                                        <td>4:30pm</td>
+                                        <td>55</td>
+                                </tr>
+                                 <tr>
+                                        <td>Rhombus Bretheren</td>
+                                        <td>Tokyo, Japan</td>
+                                        <td>1200</td>
+                                        <td>10:00am</td>
+                                        <td>165</td>
+                                </tr>
+                         </tbody>
+
+                        </table>
+                       </div>
+
+                </div>
+
+                <!-- INPUT FORM -->
+                <div class = "row">
+                                <div class="col-md-10 mx-auto table-responsive ">
+                                     <table class="table table-md rounded">
+                                     
+             
+                                     </table>
+                               </div>
+                             </div>
+
+
+
+           </div>
         </body>
 
 
