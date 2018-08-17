@@ -47,7 +47,7 @@ function pushTrainRow(named,destination,freq,ETA,minRemain){
 function checkNumber(n){
     return typeof parseInt(n) === Number;
 }
-$("#submit-form").on("click", function(event) {
+$("#submitForm").on("click", function(event) {
     event.preventDefault();
     var trainID = Math.random().toString(36).substring(7);
     var name = $("#trainName").text()
@@ -56,32 +56,34 @@ $("#submit-form").on("click", function(event) {
     var freq = $("#freq").text()
     console.log(name,dest,tTime,freq)
 
-        if(name){
-            changeRed(name)
-        }
-        else if(!validateParse(dest)){
-            changeRed(dest)
-        }
-        else if(!moment(tTime).isValid()){
-           changeRed(tTime)
-        }
-        else if(checkNumber(freq)){
-            changeRed(freq);
-        }
-        else{
-            database.ref("/"+trainID).push({
-                ID : trainID,
-                name : name,
-                destination: dest,
-                timeInitial: tTime,
-                freq : freq
-            })
-        }
-    
-
-    
-
-
-
-
+    database.ref("/"+trainID).push({
+        ID : trainID,
+        name : name,
+        destination: dest,
+        timeInitial: tTime,
+        freq : freq
+    });
 });
+        // if(name){
+        //     changeRed(name)
+        // }
+        // else if(!validateParse(dest)){
+        //     changeRed(dest)
+        // }
+        // else if(!moment(tTime).isValid()){
+        //    changeRed(tTime)
+        // }
+        // else if(checkNumber(freq)){
+        //     changeRed(freq);
+        // }
+        // else{
+            
+        //     })
+        // }
+    
+
+    
+
+
+
+

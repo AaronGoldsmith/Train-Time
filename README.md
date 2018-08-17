@@ -2,7 +2,7 @@
 A site to help with train scheduling
 
 ## TODO (ASAP)
- [ ] Add in moment.js
- [ ] Configure basic input form
+ [ x ] Add in moment.js
+ [ x ] Configure basic input form
  [ ] Link up backend to a table
  
