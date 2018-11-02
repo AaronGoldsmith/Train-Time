@@ -1,7 +1,5 @@
 
 // FIREBASE CONFIGURATION, INITIALIZATION
-
-  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyC7Hc_Yh01FK4eZCV7h_ZMdA63xFWBqrfg",
     authDomain: "train-scheduler-1b2a5.firebaseapp.com",
