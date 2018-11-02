@@ -1,6 +1,5 @@
 
 // FIREBASE CONFIGURATION, INITIALIZATION
-<<<<<<< HEAD
   var config = {
     apiKey: "AIzaSyC7Hc_Yh01FK4eZCV7h_ZMdA63xFWBqrfg",
     authDomain: "train-scheduler-1b2a5.firebaseapp.com",
@@ -10,16 +9,6 @@
     messagingSenderId: "694734863457"
   };
   firebase.initializeApp(config);
-=======
-var admin = require('firebase-admin');
-var serviceAccount = require('../train-scheduler-1b2a5-firebase-adminsdk-kc42l-c23669823f.json');
-
-// Initialize Firebase
-var app = admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://train-scheduler-1b2a5.firebaseio.com/'
-  });
->>>>>>> 786c083d7f2dfa26e3ff6f43d3b7fe40589387d8
 
 // db ref
 var database = app.database();
