@@ -11,7 +11,7 @@
   firebase.initializeApp(config);
 
 // db ref
-var database = app.database();
+var database = firebase.database();
 
 
 function changeRed(element){
