@@ -1,12 +1,19 @@
 *{box-sizing: border-box;}
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+.container-fluid{
+    padding:0px;
+    margin:0px;
+}
 
 .card{
     padding: 0;
     min-width: 10rem;
+    min-height: 60vh;
 }
-.card-header{
-    width: 100%;
-}
+
 label{
     margin:1px;
 }

@@ -1,109 +1,107 @@
 <!DOCTYPE html>
 <html>
-        <head>
-          <title>Train Scheduler</title>
-          <meta charset="UTF-8"/>
-            <!-- FIREBASE -->
-          <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
-           <!-- BOOSTRAP -->
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
-            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-            crossorigin="anonymous">
-           <!-- CSS STYLESHEET  -->
-            <link rel = "stylesheet" href="assets/style.css" type="text/css">
 
-            <!-- link jquery, javascript files and moment.js -->
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>           
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
-            <!-- CUSTOM JAVASCRIPT WITH AJAX -->
-            <script src="assets/script.js"></script>
+<head>
+    <title>Train Scheduler</title>
+    <meta charset="UTF-8" />
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- CSS STYLESHEET  -->
+    <link rel="stylesheet" href="assets/style.css" type="text/css">
 
-        </head>
+    <!-- link jquery, javascript files and moment.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+    <!-- CUSTOM JAVASCRIPT WITH AJAX -->
+    <script src="assets/script.js"></script>
 
-        <body>
-            <div class="container mt-2">
+</head>
 
-                    <!-- JUMBOTRON -->
-                <div class="row d-block mx-auto mt-2 px-5 w-100">
-                   <div class="jumbotron bg-dark text-light">
-                          <h1 class="display-4 text-center">Train Scheduler</h1>
-                          <h4 class="display-6 text-center">Aaron Goldsmith</h4>
-                   </div>
-                </div>
-                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                <!--        TRAIN INPUT        -->
-                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                <div class="row">
-                     <div class="card col-md-9 card-primary border-primary mx-auto mb-3">
-                        <div class="card-header bg-primary text-light"><strong>Enter Train Information</strong></div>
-                            <div class="card-body p-0 m-0">   
-                                <!-- START OF FORM GROUP -->
-                                
-                               <form class="form px-4 pt-3">
-                                  <div class="form-group">
-                                     <label for="trainName">Train Name</label>
-                                     <input type="text" class="form-control" id="trainName">
-                                     <small id="format help" class="form-text text-muted">e.g) The Golden Rocket</small>
-                                  </div>
-                                  <div class="form-group">
-                                     <label for="dest">Destination</label>
-                                     <input type="text" class="form-control" id="dest" >
-                                     <small id="format help" class="form-text text-muted">City, State</small>
-                                  </div>
-                                 <div class="row">
-                                   <div class="col-lg-6">
+<body>
+    <div class="container-fluid row">
+        <div class="bg-dark text-light mx-auto mt-0 mb-5 p-5 w-100">
+            <h1 class="display-4 text-center">Train Scheduler</h1>
+            <h4 class="display-6 text-center">Aaron Goldsmith</h4>
+        </div>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!--        TRAIN INPUT        -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div class="col-md-5">
+            <div class="row">
+                <div class="card col-md-9 card-primary border-primary mx-auto mb-3">
+                    <div class="card-header bg-primary text-light">
+                        <strong>Enter Train Information</strong>
+                    </div>
+                    <div class="card-body p-0 m-0">
+                        <!-- START OF FORM GROUP -->
+
+                        <form class="form px-4 pt-3">
+                            <div class="form-group">
+                                <label for="trainName">Train Name</label>
+                                <input type="text" class="form-control" id="trainName">
+                                <small id="format help" class="form-text text-muted">e.g) The Golden Rocket</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="dest">Destination</label>
+                                <input type="text" class="form-control" id="dest">
+                                <small id="format help" class="form-text text-muted">City, State</small>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="train-time">First Train Time</label>
                                         <input type="text" class="form-control" id="train-time">
                                         <small id="format help" class="form-text text-muted">HH:mm - <em>military time</em></small>
                                     </div>
-                                   </div>
+                                </div>
 
-                                  <div class="col-lg-6">
+                                <div class="col-lg-6">
                                     <div class="form-group">
                                         <label for="freq">Frequency</label>
                                         <input type="text" class="form-control" id="freq">
                                         <small id="format help" class="form-text text-muted">(min)</small>
                                     </div>
-                                 </div>
-                                 <input type="submit" id="submitForm" class="btn btn-primary mt-4"></input>
                                 </div>
-                             </form>
-                           </div>        
-                        </div>
-                </div>  
+                                <div class="mx-auto"><input type="submit" id="submitForm" class="btn btn-primary my-4 px-5" /></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+        <div class="col-md-7">
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!--    ALL DATA FOR TRAINS    -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- <br><br> -->
 
-                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                <!--    ALL DATA FOR TRAINS    -->
-                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-                <br><br>
-
-                <div class="row">
-                    <div class="card col-md-9 card-primary border-primary mx-auto mb-3">
-                        <div class="card-header bg-primary text-light"><strong>Current Train Schedule</strong></div>
-                        <div class="card-body table-responsive px-4 m-0">                           
-                           <table class="table table-md rounded">
+        <div class="row">
+            <div class="card col-md-9 card-primary border-primary mx-auto mb-3">
+                <div class="card-header bg-primary text-light"><strong>Current Train Schedule</strong></div>
+                <div class="card-body table-responsive px-4 m-0">
+                    <table class="table table-md rounded">
                         <!-- FIREBASE WILL BE USED TO DYNAMICALLY INSERTS ROWS-->
-                           <tbody>
-                                <tr>
-                                        <th scope="col">Train Name</th>
-                                        <th scope="col">Destination</th>
-                                        <th scope="col">Frequency (min)</th>
-                                        <th scope="col">Next Arrival</th>
-                                        <th scope="col">Minutes Away</th>
-                                </tr>
-                         </tbody>
-                        </table>
-                       </div>
-                  </div>
-                  <!-- END OF TABLES -->
-
-             
-
-
-
-           </div>
-        </body>
+                        <tbody>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END OF TABLES -->
+          </div>
+        </div>
+ </div>
+</body>
 
 
 
