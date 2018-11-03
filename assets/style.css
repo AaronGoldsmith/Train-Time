@@ -2,12 +2,34 @@
 body,html{
     margin: 0px;
     padding: 0px;
+    overflow-y: hidden;
+}
+.data{
+    height: 340px;
+    overflow-y: scroll;
 }
 .container-fluid{
     padding:0px;
     margin:0px;
+    min-height: 100vh;
 }
+.train-input{
+    top: 50%;
+    position: absolute;
+    visibility: hidden;
+    width: 0%;
+    color: white;
+    transition: top,width 0.5s ease-in-out;
+    z-index: 2;
+}
+.train-input.activated{
+    width: 50% !important;
+    top: 20px;
+}
+.card-header:hover{ cursor:move; }
+.card-info{ background: rgba(10,10,10) }
 
+.close{ height: 30px; width: 30px; }
 .card{
     padding: 0;
     min-width: 10rem;

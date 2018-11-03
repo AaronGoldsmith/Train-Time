@@ -33,7 +33,17 @@ function pushTrainRow(named,destination,freq,ETA,minRemain){
 
 
 $(document).ready(function(){
+    $("#addTrain").on("click",function(){
+        event.preventDefault();
+        $('.train-input').css('visibility','visible');
+        $('.train-input').addClass('activated')
+    });
+    $(".closeTrain").on("click",function(){
+        event.preventDefault();
+        $('.train-input').css('visibility','hidden');
+        $('.train-input').removeClass('activated')
 
+    });
     $("#submitForm").on("click", function(){
         event.preventDefault();
         // var trainID = Math.random().toString(36).substring(7);
