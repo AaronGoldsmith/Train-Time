@@ -1,14 +1,25 @@
 
+
+try{
+    const secrets = import("../env.js")
+        firebase.initializeApp({
+           apiKey: secrets.DB_SECRET,
+           authDomain: secrets.DB_AUTHDOMAIN,
+           databaseURL: "https://train-scheduler-1b2a5.firebaseio.com",
+           projectId: "train-scheduler-1b2a5",
+           storageBucket: secrets.DB_SB,
+           messagingSenderId: "694734863457"
+         });
+       // console.log(config);
+}
+catch(err){
+    console.log(err)
+}
+
+
 // FIREBASE CONFIGURATION, INITIALIZATION
-const config = {
-    apiKey: process.env.DB_SECRET,
-    authDomain: process.env.DB_AUTHDOMAIN,
-    databaseURL: process.env.DB_URL,
-    projectId: "train-scheduler-1b2a5",
-    storageBucket: process.env.DB_SB,
-    messagingSenderId: "694734863457"
-  };
-  firebase.initializeApp(config);
+
+
 
 // db ref
 var database = firebase.database();
