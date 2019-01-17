@@ -1,17 +1,26 @@
 
-// FIREBASE CONFIGURATION, INITIALIZATION
-  var config = {
-    apiKey: "AIzaSyC7Hc_Yh01FK4eZCV7h_ZMdA63xFWBqrfg",
-    authDomain: "train-scheduler-1b2a5.firebaseapp.com",
-    databaseURL: "https://train-scheduler-1b2a5.firebaseio.com",
-    projectId: "train-scheduler-1b2a5",
-    storageBucket: "train-scheduler-1b2a5.appspot.com",
-    messagingSenderId: "694734863457"
-  };
-  firebase.initializeApp(config);
 
-// db ref
-var database = firebase.database();
+try{
+    const secrets = import("../env.js")
+        firebase.initializeApp({
+           apiKey: secrets.DB_SECRET,
+           authDomain: secrets.DB_AUTHDOMAIN,
+           databaseURL: "https://train-scheduler-1b2a5.firebaseio.com",
+           projectId: "train-scheduler-1b2a5",
+           storageBucket: secrets.DB_SB,
+           messagingSenderId: "694734863457"
+         });
+       // console.log(config);
+}
+catch(err){
+    console.log(err)
+}
+finally{
+    var database = firebase.database();
+}
+
+
+// FIREBASE CONFIGURATION, INITIALIZATION
 
 
 function changeRed(element){
