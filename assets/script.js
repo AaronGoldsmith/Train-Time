@@ -1,11 +1,11 @@
 
 // FIREBASE CONFIGURATION, INITIALIZATION
-  var config = {
-    apiKey: "AIzaSyC7Hc_Yh01FK4eZCV7h_ZMdA63xFWBqrfg",
-    authDomain: "train-scheduler-1b2a5.firebaseapp.com",
-    databaseURL: "https://train-scheduler-1b2a5.firebaseio.com",
+const config = {
+    apiKey: process.env.DB_SECRET,
+    authDomain: process.env.DB_AUTHDOMAIN,
+    databaseURL: process.env.DB_URL,
     projectId: "train-scheduler-1b2a5",
-    storageBucket: "train-scheduler-1b2a5.appspot.com",
+    storageBucket: process.env.DB_SB,
     messagingSenderId: "694734863457"
   };
   firebase.initializeApp(config);
