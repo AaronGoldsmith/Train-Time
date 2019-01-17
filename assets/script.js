@@ -15,14 +15,12 @@ try{
 catch(err){
     console.log(err)
 }
+finally{
+    var database = firebase.database();
+}
 
 
 // FIREBASE CONFIGURATION, INITIALIZATION
-
-
-
-// db ref
-var database = firebase.database();
 
 
 function changeRed(element){
